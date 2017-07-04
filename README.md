@@ -11,3 +11,5 @@ https://wuwu5.github.io/live/
 
 ## 扫一扫
 
+
+![avatar](https://wuwu5.github.io/live/assets/weixin.png)
