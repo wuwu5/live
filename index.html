@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+	<title>生活服务</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	
+</head>
+<body>
+	<div id="app" class="container">
+		<header class="header">
+				<a class="header_back" href="#">{{backText}}</a>
+				<span>{{titleText}}</span>
+			</header>
+			<router-view></router-view>
+	</div>
+
+	<script type="text/x-template" id="tpl_one">
+		<section class="list">
+			<router-link class="list_item" v-bind:to="todo.hrefUrl" v-for="todo in todos">
+				<img class="item_img" v-bind:src="todo.imgurl" alt="">
+				<p class="item_title"> 
+					{{todo.text}}
+				</p>
+			</router-link>
+		</section>
+	</script>
+	<script type="text/x-template" id="tpl_two">
+		<section class="list">
+			<a class="list_item" v-bind:href="todo.hrefUrl" v-for="todo in todos">
+				<img class="item_img" v-bind:src="todo.imgurl" alt="">
+				<p class="item_title"> 
+					{{todo.text}}
+				</p>
+			</a>
+		</section>
+	</script>
+	<script src="js/index.js"></script>
+	<script src="js/phone.js"></script>
+	<script src="js/car.js"></script>
+	<script src="js/bank.js"></script>
+	<script src="js/kd.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
